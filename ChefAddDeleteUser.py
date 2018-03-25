@@ -16,7 +16,7 @@ def addnewuser():
 	if uname in users_list:
 		print "User already exist in Chef Server"
 	else:     
-	        os.system("chef-server-ctl user-create --filename /etc/chef-server/"+uname+".pem "+uname+" "+fname+" "+lname+" "+uname+"@demo.hcinternal.net "+upass)
+	        os.system("chef-server-ctl user-create --filename /etc/chef-server/"+uname+".pem "+uname+" "+fname+" "+lname+" "+uname+"@example.com "+upass)
 	        time.sleep(10)
     	        print "Chef user added"
   	        os.system("chef-server-ctl org-user-add osgraphic "+uname)
